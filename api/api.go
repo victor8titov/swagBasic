@@ -75,3 +75,16 @@ func AnonymousField() {
 type Pet3 struct {
 	ID int `json:"id"`
 }
+
+// GetStringInfo example
+//
+//	@Summary			My new point
+//	@Description 	desc
+//	@ID 				get-info
+//	@Success 		200 {string}	string	"ok"
+//	@Failure 		404 string	string	"Can not "
+//	@Router 			/testapi/get-info [get]
+func GetStringInfo(w http.ResponseWriter, r *http.Request) {
+	// h := "heelo"
+	// fmt.Fprintf(w, "This is answer fro server with my %v", h)
+}

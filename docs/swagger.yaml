@@ -1,4 +1,4 @@
-basePath: /v2
+basePath: /
 definitions:
   web.APIError:
     properties:
@@ -49,13 +49,12 @@ definitions:
       name:
         type: string
     type: object
-host: petstore.swagger.io
+host: localhost:8080
 info:
   contact:
-    email: support@swagger.io
+    email: tomato@gmail.com
     name: API Support
-    url: http://www.swagger.io/support
-  description: This is a sample server Petstore server.
+  description: My description.
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
@@ -91,6 +90,19 @@ paths:
           schema:
             $ref: '#/definitions/web.APIError'
       summary: Upload file
+  /testapi/get-info:
+    get:
+      description: desc
+      responses:
+        "200":
+          description: ok
+          schema:
+            type: string
+        "404":
+          description: 'Can not '
+          schema:
+            type: string
+      summary: My new point
   /testapi/get-string-by-int/{some_id}:
     get:
       consumes:
